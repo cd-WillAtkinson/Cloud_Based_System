@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.javafxapplication1.RegisterController">
+   <children>
+      <!-- Title -->
+      <Label layoutX="200.0" layoutY="50.0" text="Register New User" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+      
+      <!-- Form Layout -->
+      <GridPane alignment="CENTER" layoutX="100.0" layoutY="100.0" prefWidth="400.0" hgap="10" vgap="15">
+         <columnConstraints>
+            <ColumnConstraints minWidth="100.0" prefWidth="150.0" />
+            <ColumnConstraints minWidth="200.0" prefWidth="250.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+            <RowConstraints prefHeight="40.0" />
+         </rowConstraints>
+
+         <!-- Username -->
+         <Label text="Username:" />
+         <TextField fx:id="userTextField" GridPane.columnIndex="1" />
+
+         <!-- Password -->
+         <Label text="Password:" GridPane.rowIndex="1" />
+         <PasswordField fx:id="passPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+         <!-- Re-type Password -->
+         <Label text="Re-type Password:" GridPane.rowIndex="2" />
+         <PasswordField fx:id="rePassPasswordField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+         <!-- Role Selection -->
+         <Label text="Select Role:" GridPane.rowIndex="3" />
+         <ComboBox fx:id="roleComboBox" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         </ComboBox>
+
+         <!-- Select File -->
+         <Label text="Select File:" GridPane.rowIndex="4" />
+         <Button fx:id="selectBtn" text="Choose File" onAction="#selectBtnHandler" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+         <Text fx:id="fileText" text="No file selected." GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+         <!-- Buttons -->
+         <HBox spacing="20" GridPane.columnSpan="2" GridPane.rowIndex="6" alignment="CENTER">
+            <Button fx:id="registerBtn" text="Register" onAction="#registerBtnHandler" />
+            <Button fx:id="backLoginBtn" text="Return to Login" onAction="#backLoginBtnHandler" />
+         </HBox>
+      </GridPane>
+   </children>
+</AnchorPane>
+
